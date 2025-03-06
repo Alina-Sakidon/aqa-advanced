@@ -1,0 +1,24 @@
+{
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alina-Sakidon/aqa-advanced.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alina-Sakidon/aqa-advanced/issues"
+  },
+  "homepage": "https://github.com/Alina-Sakidon/aqa-advanced#readme",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
+}
