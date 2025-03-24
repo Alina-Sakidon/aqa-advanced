@@ -45,7 +45,6 @@ export class Book {
         return books.reduce((oldestBook, currentBook) =>
             oldestBook.year < currentBook.year ? oldestBook : currentBook
         );
-        ;
     }
 
     printInfo() {
