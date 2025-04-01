@@ -10,7 +10,8 @@ export default defineConfig([
   {
     rules: {
       "no-unused-vars": "warn",
-      "eqeqeq": ["error", "always"]
+      "eqeqeq": ["error", "always"],
+      'no-useless-catch': 'off'
     }
   }
 ]);
