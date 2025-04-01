@@ -20,5 +20,11 @@
   "type": "module",
   "dependencies": {
     "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "prettier": "3.5.3"
   }
 }
