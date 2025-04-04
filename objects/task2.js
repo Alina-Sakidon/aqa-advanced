@@ -1,7 +1,7 @@
 const book = {
-    title: 'Effective Java',
-    author: 'Joshua Bloch',
-    year: 2008
+	title: 'Effective Java',
+	author: 'Joshua Bloch',
+	year: 2008,
 };
 
 const { title, author } = book;

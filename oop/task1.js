@@ -24,21 +24,21 @@ console.log(`Book name: ${book1.name}, Author: ${book1.author}, Year: ${book1.ye
 
 console.log(`Using setters with wrong values`);
 try {
-    book1.name = 1;
+	book1.name = 1;
 } catch (error) {
-    console.log(error.message);
+	console.log(error.message);
 }
 
 try {
-    book1.author = 1;
+	book1.author = 1;
 } catch (error) {
-    console.log(error.message);
+	console.log(error.message);
 }
 
 try {
-    book1.year = '2000';
+	book1.year = '2000';
 } catch (error) {
-    console.log(error.message);
+	console.log(error.message);
 }
 
 console.log(`Using setters and getters ${ebook1.format}`);
@@ -47,10 +47,10 @@ console.log(`E-Book title: ${ebook1.name}, Author: ${ebook1.author}, Format: ${e
 
 console.log(`Using setters with wrong values`);
 try {
-    ebook1.format = 'TXT';
+	ebook1.format = 'TXT';
 } catch (error) {
-    console.error(error);
-};
+	console.error(error);
+}
 
 console.log(`Task 4`);
 const ebook3 = new EBook(`"Java"`, `Herbert Schildt`, 2014, `PDF`);

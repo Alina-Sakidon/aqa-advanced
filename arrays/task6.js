@@ -3,4 +3,4 @@ const copiedArray = [...numbersList];
 const sortedArray = copiedArray.sort((a, b) => a - b);
 
 console.log(`Original array:`, numbersList);
-console.log(`Sorted array:`, sortedArray);   
+console.log(`Sorted array:`, sortedArray);
