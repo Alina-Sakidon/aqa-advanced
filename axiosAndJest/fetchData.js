@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-async function fetchData() {
+export async function fetchData() {
     try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts/wrongUrl');
         console.log(response.data);
@@ -13,16 +13,15 @@ async function fetchData() {
     }
 }
 
-async function fetchDataWithHeadersAndParam(url, headers, params) {
+export async function fetchDataWithHeadersAndParam(url, headers, params) {
     try {
         const response = await axios.get(url, {
             headers: headers,
             params: params,
         });
+        console.log(response.data);
         return response.data;
     } catch (error) {
         throw new Error('Request failed: ' + error.message);
     }
 }
-
-export { fetchDataWithHeadersAndParam, fetchData };

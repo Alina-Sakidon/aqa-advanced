@@ -1,17 +1,23 @@
 import { fetchDataWithHeadersAndParam } from './fetchData';
+import axios from 'axios';
+jest.mock('axios');
 
-test('fetchData should include custom headers and query params in the request', async () => {
-    expect.assertions(2);
+test('fetch users with params and headers should have correct values', async () => {
+    expect.assertions(3);
+
     const url = 'https://jsonplaceholder.typicode.com/posts';
-    const customHeaders = { 'Authorization': 'Bearer token' };
-    const customParams = { userId: 1 };
+    const customHeaders = { 'Content-Type': 'application/json' };
+    const customParams = { id: 1 };
+    const mockResponse = { data: [{ userId: 1, id: 1, title: 'Test Post' }] };
+    axios.get.mockResolvedValue(mockResponse);
+    const params = new URLSearchParams(customParams);
 
-    try {
-        const result = await fetchDataWithHeadersAndParam(url, customHeaders, customParams);
-        expect(result).toBeInstanceOf(Array);
-        expect(result.some(item => item.userId === 1)).toBe(true);
-    } catch (error) {
-        console.error(error);
-        throw new Error('Test failed due to network issues or bad request.');
-    }
+    const result = await fetchDataWithHeadersAndParam(url, customHeaders, customParams);
+
+    expect(axios.get).toHaveBeenCalledWith(url, expect.objectContaining({
+        headers: expect.objectContaining(customHeaders),
+        params: expect.objectContaining(customParams),
+    }));
+    expect(result).toEqual(mockResponse.data);
+    expect(params.toString()).toBe('id=1');
 });
