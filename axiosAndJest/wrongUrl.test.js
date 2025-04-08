@@ -1,4 +1,4 @@
-import {fetchData} from "./fetchData";
+import { fetchData } from "./fetchData";
 
 test('fetchData should throw an error for a wrong URL', async () => {
     expect.assertions(1);

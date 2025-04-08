@@ -7,7 +7,7 @@ async function fetchData() {
         return response.data;
     }
 
-catch (error) {
+    catch (error) {
         console.error('Error fetching data:', error.message);
         throw new Error('Request failed with status: ' + (error.response?.status || 'Unknown error'));
     }
@@ -15,14 +15,14 @@ catch (error) {
 
 async function fetchDataWithHeadersAndParam(url, headers, params) {
     try {
-      const response = await axios.get(url, {
-        headers: headers, // Кастомні заголовки
-        params: params,   // Кастомні параметри URL
-      });
-      return response.data;
+        const response = await axios.get(url, {
+            headers: headers,
+            params: params,
+        });
+        return response.data;
     } catch (error) {
-      throw new Error('Request failed: ' + error.message);
+        throw new Error('Request failed: ' + error.message);
     }
-  }
+}
 
 export { fetchDataWithHeadersAndParam, fetchData };
