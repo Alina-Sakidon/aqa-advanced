@@ -19,7 +19,6 @@ export async function fetchDataWithHeadersAndParam(url, headers, params) {
             headers: headers,
             params: params,
         });
-        console.log(response.data);
         return response.data;
     } catch (error) {
         throw new Error('Request failed: ' + error.message);

@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker';
 import { fetchDataWithHeadersAndParam } from './fetchData';
 import axios from 'axios';
 jest.mock('axios');
@@ -8,7 +9,7 @@ test('fetch users with params and headers should have correct values', async () 
     const url = 'https://jsonplaceholder.typicode.com/posts';
     const customHeaders = { 'Content-Type': 'application/json' };
     const customParams = { id: 1 };
-    const mockResponse = { data: [{ userId: 1, id: 1, title: 'Test Post' }] };
+    const mockResponse = { data: [{ userId: 1, id: 1, title: faker.lorem.sentence()}] };
     axios.get.mockResolvedValue(mockResponse);
     const params = new URLSearchParams(customParams);
 
