@@ -19,7 +19,7 @@ export async function fetchDataWithHeadersAndParam(url, headers, params) {
             headers: headers,
             params: params,
         });
-        return response.data;
+        return response;
     } catch (error) {
         throw new Error('Request failed: ' + error.message);
     }
