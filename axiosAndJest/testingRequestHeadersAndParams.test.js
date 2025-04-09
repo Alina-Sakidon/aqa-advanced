@@ -1,8 +1,9 @@
 import { fetchDataWithHeadersAndParam } from './fetchData';
+import envConfig from '../env.json';
 import axios from 'axios';
 
 test('fetch users with params and headers should have correct values', async () => {
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = `${envConfig.baseUrl}/posts`;
     const headers = {
         'Authorization': 'Bearer token123',
         'Custom-Header': 'TestHeaderValue',
